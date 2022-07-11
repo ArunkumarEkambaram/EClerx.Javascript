@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form Validation</title>
+    <script>
+        function validateMobileNo() {
+            var mobNo = document.getElementById("txtMobileNo").value;            
+            if (mobNo.length != 10) {
+                alert("Mobile No should be 10 digit");              
+            }
+        }
+    </script>
+</head>
+<body onsubmit="validateMobileNo();">
+    <h1>Example 2</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td> <input type="text" id="txtName"  required/> </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td> <input type="text" id="txtCity" required/> </td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td> <input type="text" id="txtMobileNo" required /> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+</html>

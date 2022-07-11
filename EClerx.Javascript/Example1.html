@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+    <h1>Welcome to Javascript Demo</h1>
+    <h2>Example 1</h2>
+    <h2>Heading 2</h2>
+    <hr />
+    <div id="div1">Div Tag</div>
+    <br />
+    <br />
+    <div id="d2"></div>
+    <br />
+    <button onclick="calculate();">Calculate</button>
+    <p id="res">
+
+    </p>
+
+    <!--Javascript Code Block-->
+    <script>
+        //function print() {
+        //    alert("Welcome to Javascript Demo");
+        //}
+
+        //print();
+
+        //var x = 'ABC';
+        //var x = 100;
+        //console.log("Var Example :" + x);
+
+        //let a = 100;
+        ////let a = "ABC";
+        //console.log("Let Example :" + a);
+
+        //document.getElementById('div1').innerHTML = "Hello, World!!!";
+        //let x = 10, y = 20;
+        //let z = x + y;
+
+        //let h2Tag = document.getElementsByTagName("h2");
+        //h2Tag[0].innerHTML = "Sum :" + z;
+
+        ////Anonymous Type or Object
+        //var employees = { Id: 101, Name: 'Karthick', Description: 'Manager', Salary: 70000 };
+        //let d1 = document.getElementById('div1');
+        //d1.innerHTML = "Employee Id :" + employees.Id + "<br>Employee Name: " + employees.Name + "<br>Description :" + employees.Description + "<br>Salary :" + employees.Salary;
+
+        ////Array
+        //let cities = ["Chennai", "Delhi", 'Pune', 'Kolkatta', 'Hyderabad'];
+        //let d2 = document.getElementById("d2");
+        //for (var i = 0; i < cities.length; i++) {
+        //    d2.innerHTML += cities[i] + "<br>";
+        //}
+
+        function printDate() {
+            var dt = new Date();
+            console.log(dt.toLocaleDateString());
+            var d2 = document.getElementById("d2");
+            d2.innerHTML = dt.toLocaleDateString();
+        }
+
+        printDate();
+
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        var d1 = document.getElementById("div1");
+        d1.innerHTML = "Total Values :" + addNumbers(100, 300);
+
+        function calculate() {
+            var a = prompt("Enter a Number :");
+            var b = prompt("Enter a Number :");
+
+            //isNan  - Is Not a Number
+            if (!(isNaN(a) && isNaN(b))) {
+                var result = addNumbers(Number(a), Number(b));
+                var p1 = document.getElementById("res");
+                p1.innerHTML = "Sum of a and b :" + result;
+                alert("Sum of a and b :" + result);
+            }
+        }
+
+    </script>
+</body>
+</html>
